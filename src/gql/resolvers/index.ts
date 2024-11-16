@@ -23,6 +23,14 @@ const resolvers = {
 		category: (parent) => {
 			return db.categories.find((category) => category.id === parent.categoryId);
 		}
+	},
+	Category: {
+		products: (parent) => {
+			return db.products.filter((product) => product.categoryId === parent.id);
+		},
+		totalProducts: (parent) => {
+			return db.products.filter((product) => product.categoryId === parent.id).length;
+		}
 	}
 };
 

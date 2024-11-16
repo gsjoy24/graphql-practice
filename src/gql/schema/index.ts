@@ -16,6 +16,8 @@ const typeDefs = `#graphql
     id: ID!
     name: String!
     description: String
+    products: [Product]
+    totalProducts: Int
   }
 
   type Query {
