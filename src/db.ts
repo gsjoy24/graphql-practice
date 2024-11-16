@@ -1,4 +1,57 @@
-const productsData = [
+const categories = [
+	{
+		id: "ELEC001",
+		name: "Electronics",
+		description: "Devices and gadgets that make life easier and more connected."
+	},
+	{
+		id: "FURN002",
+		name: "Furniture",
+		description: "Comfortable and stylish furniture for your home or office."
+	},
+	{
+		id: "KITCH003",
+		name: "Kitchen Appliances",
+		description: "Essential appliances to simplify your cooking and food preparation."
+	},
+	{
+		id: "ELEC004",
+		name: "Gaming Accessories",
+		description: "High-performance accessories to enhance your gaming experience."
+	},
+	{
+		id: "FTWR005",
+		name: "Footwear",
+		description: "Stylish and comfortable footwear for various activities."
+	},
+	{
+		id: "ACCS006",
+		name: "Accessories",
+		description: "Protective and functional accessories for your devices and gadgets."
+	},
+	{
+		id: "WATC007",
+		name: "Watches",
+		description: "Stylish and functional watches for every occasion."
+	},
+	{
+		id: "ELEC008",
+		name: "Audio Devices",
+		description: "High-quality speakers and audio devices for immersive sound."
+	},
+	{
+		id: "KITCH009",
+		name: "Cookware",
+		description: "Durable and practical cookware for all your culinary needs."
+	},
+	{
+		id: "FITN010",
+		name: "Fitness Gear",
+		description: "Gear and equipment to support your fitness and wellness goals."
+	}
+];
+
+const products = [
 	{
 		id: "PROD001",
 		name: "Wireless Bluetooth Headphones",
@@ -101,62 +154,160 @@ const productsData = [
 	}
 ];
 
-const categoriesData = [
+const reviews = [
 	{
-		id: "ELEC001",
-		name: "Electronics",
-		description: "Devices and gadgets that make life easier and more connected."
+		id: "REV001",
+		productId: "PROD001",
+		rating: 4,
+		comment:
+			"Great sound quality and comfortable to wear. The noise cancellation works well, but the battery life could be a little longer.",
+		date: "2024-11-16"
 	},
 	{
-		id: "FURN002",
-		name: "Furniture",
-		description: "Comfortable and stylish furniture for your home or office."
+		id: "REV002",
+		productId: "PROD001",
+		rating: 5,
+		comment:
+			"I love these headphones! The sound is crystal clear and they are so comfortable for long hours. Highly recommend!",
+		date: "2024-11-15"
 	},
 	{
-		id: "KITCH003",
-		name: "Kitchen Appliances",
-		description: "Essential appliances to simplify your cooking and food preparation."
+		id: "REV003",
+		productId: "PROD002",
+		rating: 5,
+		comment: "This chair is amazing! I sit for hours working, and the lumbar support is perfect. Super comfy!",
+		date: "2024-11-14"
 	},
 	{
-		id: "ELEC004",
-		name: "Gaming Accessories",
-		description: "High-performance accessories to enhance your gaming experience."
+		id: "REV004",
+		productId: "PROD002",
+		rating: 3,
+		comment: "It’s a good chair, but the armrests aren’t adjustable enough for my liking. Still, it’s a solid option.",
+		date: "2024-11-13"
 	},
 	{
-		id: "FTWR005",
-		name: "Footwear",
-		description: "Stylish and comfortable footwear for various activities."
+		id: "REV005",
+		productId: "PROD003",
+		rating: 4,
+		comment: "Very efficient kettle, boils quickly. Only downside is that it’s a bit too loud when boiling.",
+		date: "2024-11-12"
 	},
 	{
-		id: "ACCS006",
-		name: "Accessories",
-		description: "Protective and functional accessories for your devices and gadgets."
+		id: "REV006",
+		productId: "PROD003",
+		rating: 5,
+		comment: "Excellent kettle! It boils water in no time and looks sleek on my countertop.",
+		date: "2024-11-11"
 	},
 	{
-		id: "WATC007",
-		name: "Watches",
-		description: "Stylish and functional watches for every occasion."
+		id: "REV007",
+		productId: "PROD004",
+		rating: 3,
+		comment:
+			"The keyboard feels good, but the keys aren’t as responsive as I expected. I would have liked more key customization options.",
+		date: "2024-11-10"
 	},
 	{
-		id: "ELEC008",
-		name: "Audio Devices",
-		description: "High-quality speakers and audio devices for immersive sound."
+		id: "REV008",
+		productId: "PROD004",
+		rating: 2,
+		comment: "The RGB lights are cool, but the keys feel cheap and not very durable. Wouldn’t recommend for heavy use.",
+		date: "2024-11-09"
 	},
 	{
-		id: "KITCH009",
-		name: "Cookware",
-		description: "Durable and practical cookware for all your culinary needs."
+		id: "REV009",
+		productId: "PROD005",
+		rating: 5,
+		comment: "These running shoes are fantastic! They are light and provide excellent support during my runs.",
+		date: "2024-11-08"
 	},
 	{
-		id: "FITN010",
-		name: "Fitness Gear",
-		description: "Gear and equipment to support your fitness and wellness goals."
+		id: "REV010",
+		productId: "PROD005",
+		rating: 4,
+		comment: "Very comfortable, but I feel the fit could be a bit tighter around the midfoot. Overall, a great buy.",
+		date: "2024-11-07"
+	},
+	{
+		id: "REV011",
+		productId: "PROD006",
+		rating: 4,
+		comment: "Good quality case for my phone. It’s sturdy and looks great. Wish it had a bit more grip though.",
+		date: "2024-11-06"
+	},
+	{
+		id: "REV012",
+		productId: "PROD006",
+		rating: 5,
+		comment: "Exactly what I needed! Fits my phone perfectly, and the material feels premium.",
+		date: "2024-11-05"
+	},
+	{
+		id: "REV013",
+		productId: "PROD007",
+		rating: 4,
+		comment:
+			"Nice watch with great features, but I wish the display was a little brighter. It’s hard to see in direct sunlight.",
+		date: "2024-11-04"
+	},
+	{
+		id: "REV014",
+		productId: "PROD007",
+		rating: 5,
+		comment: "Perfect for daily use. The watch is stylish and the features are great for fitness tracking.",
+		date: "2024-11-03"
+	},
+	{
+		id: "REV015",
+		productId: "PROD008",
+		rating: 5,
+		comment:
+			"The sound quality is amazing for such a portable speaker. I use it daily and the battery life is excellent.",
+		date: "2024-11-02"
+	},
+	{
+		id: "REV016",
+		productId: "PROD008",
+		rating: 4,
+		comment: "Very good sound, but the volume could be a bit louder. Great for casual listening and outdoor use.",
+		date: "2024-11-01"
+	},
+	{
+		id: "REV017",
+		productId: "PROD009",
+		rating: 4,
+		comment:
+			"Good frying pan. Cooks evenly, and the non-stick surface works well. The handle gets a bit hot after long cooking times.",
+		date: "2024-10-31"
+	},
+	{
+		id: "REV018",
+		productId: "PROD009",
+		rating: 5,
+		comment: "Love this frying pan! It’s durable and easy to clean. Perfect for everyday use.",
+		date: "2024-10-30"
+	},
+	{
+		id: "REV019",
+		productId: "PROD010",
+		rating: 3,
+		comment: "Good mat, but it's a bit slippery when wet. It's comfortable for yoga, but the grip could be better.",
+		date: "2024-10-29"
+	},
+	{
+		id: "REV020",
+		productId: "PROD010",
+		rating: 4,
+		comment:
+			"Great mat for yoga and light workouts. The thickness provides good cushioning, but it could have better traction.",
+		date: "2024-10-28"
 	}
 ];
 
 const db = {
-	products: productsData,
-	categories: categoriesData
+	products,
+	categories,
+	reviews
 };
 
 export default db;

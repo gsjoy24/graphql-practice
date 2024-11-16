@@ -22,6 +22,9 @@ const resolvers = {
 	Product: {
 		category: (parent) => {
 			return db.categories.find((category) => category.id === parent.categoryId);
+		},
+		reviews: (parent) => {
+			return db.reviews.filter((review) => review.productId === parent.id);
 		}
 	},
 	Category: {

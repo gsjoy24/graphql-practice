@@ -1,5 +1,13 @@
 const typeDefs = `#graphql
 
+  type Category {
+    id: ID!
+    name: String!
+    description: String
+    products: [Product]
+    totalProducts: Int
+  }
+
   type Product {
     id: ID!
     name: String!
@@ -10,14 +18,15 @@ const typeDefs = `#graphql
     category: Category!
     quantity: Int!
     description: String
+    reviews: [Review]
   }
 
-  type Category {
+  type Review {
     id: ID!
-    name: String!
-    description: String
-    products: [Product]
-    totalProducts: Int
+    productId: ID!
+    rating: Int!
+    comment: String
+    date: String
   }
 
   type Query {
