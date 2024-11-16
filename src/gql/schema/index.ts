@@ -6,7 +6,8 @@ const typeDefs = `#graphql
     image: String!
     onStock: Boolean!
     price: Float!
-    category: String!
+    categoryId: String!
+    category: Category!
     quantity: Int!
     description: String
   }

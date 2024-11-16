@@ -18,6 +18,11 @@ const resolvers = {
 			}
 			return category;
 		}
+	},
+	Product: {
+		category: (parent) => {
+			return db.categories.find((category) => category.id === parent.categoryId);
+		}
 	}
 };
 

@@ -5,7 +5,7 @@ const productsData = [
 		image: "https://example.com/images/headphones.jpg",
 		onStock: true,
 		price: 59.99,
-		category: "ELEC001",
+		categoryId: "ELEC001",
 		quantity: 150,
 		description: "High-quality wireless headphones with noise-cancellation and a long battery life."
 	},
@@ -15,7 +15,7 @@ const productsData = [
 		image: "https://example.com/images/office-chair.jpg",
 		onStock: true,
 		price: 129.99,
-		category: "FURN002",
+		categoryId: "FURN002",
 		quantity: 50,
 		description: "Comfortable ergonomic office chair with lumbar support and adjustable height."
 	},
@@ -25,7 +25,7 @@ const productsData = [
 		image: "https://example.com/images/kettle.jpg",
 		onStock: true,
 		price: 29.99,
-		category: "KITCH003",
+		categoryId: "KITCH003",
 		quantity: 200,
 		description: "Fast-boiling electric kettle with a sleek design and automatic shut-off feature."
 	},
@@ -35,7 +35,7 @@ const productsData = [
 		image: "https://example.com/images/keyboard.jpg",
 		onStock: false,
 		price: 49.99,
-		category: "ELEC004",
+		categoryId: "ELEC004",
 		quantity: 0,
 		description: "RGB-backlit gaming keyboard with programmable keys and durable build quality."
 	},
@@ -45,7 +45,7 @@ const productsData = [
 		image: "https://example.com/images/running-shoes.jpg",
 		onStock: true,
 		price: 89.99,
-		category: "FTWR005",
+		categoryId: "FTWR005",
 		quantity: 75,
 		description: "Lightweight and comfortable running shoes suitable for all terrains."
 	},
@@ -55,7 +55,7 @@ const productsData = [
 		image: "https://example.com/images/phone-case.jpg",
 		onStock: true,
 		price: 12.99,
-		category: "ACCS006",
+		categoryId: "ACCS006",
 		quantity: 300,
 		description: "Durable and stylish case compatible with multiple smartphone models."
 	},
@@ -65,7 +65,7 @@ const productsData = [
 		image: "https://example.com/images/digital-watch.jpg",
 		onStock: true,
 		price: 45.0,
-		category: "WATC007",
+		categoryId: "WATC007",
 		quantity: 100,
 		description: "Water-resistant digital watch with multiple features including stopwatch and alarm."
 	},
@@ -75,7 +75,7 @@ const productsData = [
 		image: "https://example.com/images/speaker.jpg",
 		onStock: true,
 		price: 39.99,
-		category: "ELEC008",
+		categoryId: "ELEC008",
 		quantity: 85,
 		description: "Compact and powerful portable speaker with Bluetooth connectivity."
 	},
@@ -85,7 +85,7 @@ const productsData = [
 		image: "https://example.com/images/frying-pan.jpg",
 		onStock: true,
 		price: 24.99,
-		category: "KITCH009",
+		categoryId: "KITCH009",
 		quantity: 120,
 		description: "Durable non-stick frying pan for easy cooking and cleaning."
 	},
@@ -95,7 +95,7 @@ const productsData = [
 		image: "https://example.com/images/yoga-mat.jpg",
 		onStock: false,
 		price: 19.99,
-		category: "FITN010",
+		categoryId: "FITN010",
 		quantity: 0,
 		description: "Eco-friendly yoga mat with excellent grip and cushioning."
 	}
