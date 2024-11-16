@@ -20,19 +20,19 @@ const resolvers = {
 		}
 	},
 	Product: {
-		category: (parent) => {
-			return db.categories.find((category) => category.id === parent.categoryId);
+		category: ({ categoryId }) => {
+			return db.categories.find((category) => category.id === categoryId);
 		},
-		reviews: (parent) => {
-			return db.reviews.filter((review) => review.productId === parent.id);
+		reviews: ({ id }) => {
+			return db.reviews.filter((review) => review.productId === id);
 		}
 	},
 	Category: {
-		products: (parent) => {
-			return db.products.filter((product) => product.categoryId === parent.id);
+		products: ({ id }) => {
+			return db.products.filter((product) => product.categoryId === id);
 		},
-		totalProducts: (parent) => {
-			return db.products.filter((product) => product.categoryId === parent.id).length;
+		totalProducts: ({ id }) => {
+			return db.products.filter((product) => product.categoryId === id).length;
 		}
 	}
 };
